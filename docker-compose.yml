@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  mysql:
+    container_name: laravel-test-mysql
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./tmp:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: test
+    hostname: localhost
